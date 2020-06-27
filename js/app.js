@@ -49,11 +49,11 @@ document.getElementById('navbar__list').style.justifyContent = 'space-around';
 
 
 // Add class 'active' to section when near top of viewport
-var sections = document.querySelectorAll("landing__container");
+var sections = document.querySelectorAll("section div");
 var links = document.querySelectorAll("nav a");
 
 function ActiveLink() {
-  sections.forEach((section) =>
+  sections.forEach((section) => 
     window.addEventListener("scroll", function () {
       if (
         section.getBoundingClientRect().top + 200 < window.innerHeight &&
