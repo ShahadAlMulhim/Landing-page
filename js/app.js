@@ -23,19 +23,6 @@ const AddClassTolinks = ["link1", "link2", "link3 " , "link4"];
 const Anchors = ["first", "second", "third", "four"];
 
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-
 // build the nav
 menuLink.forEach(function(i) {
     var CreatList = document.createElement('li');
@@ -62,19 +49,31 @@ document.getElementById('navbar__list').style.justifyContent = 'space-around';
 
 
 // Add class 'active' to section when near top of viewport
+var sections = document.querySelectorAll("landing__container");
+var links = document.querySelectorAll("nav a");
+
+function ActiveLink() {
+  sections.forEach((section) =>
+    window.addEventListener("scroll", function () {
+      if (
+        section.getBoundingClientRect().top + 200 < window.innerHeight &&
+        section.getBoundingClientRect().bottom + 200 > window.innerHeight
+      ) {
+        links.classList.add("active");
+      } else {
+        links.classList.remove("active");
+      }
+    })
+  );
+}
+
+// call the function to activate links
+ActiveLink();
 
 
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
 
 
 // Scroll to section on link click
-const links = document.querySelectorAll("li");
 links.forEach((link)=> {
     link.addEventListener('click', function(){
         var SectionScroll = document.getElementById(link.getAttribute("data-link"));
@@ -83,27 +82,4 @@ links.forEach((link)=> {
             block: "center"
         });
     })
-
 })
-
-
-var sections = document.querySelectorAll("section");
-
-function ActiveLink(){
-sections.forEach((section) =>
-window.addEventListener("scroll", function () {
-    if ( section.getBoundingClientRect().top + 200 < window.innerHeight && section.getBoundingClientRect().bottom + 200 > window.innerHeight ) {
-        
-        links.classList.add("active");
-        
-      } else {
-          
-        links.classList.remove("active");
-        
-      }
-    })
-  );
-}
-
-// call the function to activate links 
-ActiveLink();
