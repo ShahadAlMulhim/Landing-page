@@ -53,15 +53,15 @@ var sections = document.querySelectorAll("section div");
 var links = document.querySelectorAll("nav a");
 
 function ActiveLink() {
-  sections.forEach((section) => 
+  sections.forEach((section) =>
     window.addEventListener("scroll", function () {
       if (
         section.getBoundingClientRect().top + 200 < window.innerHeight &&
         section.getBoundingClientRect().bottom + 200 > window.innerHeight
       ) {
-        links.classList.add("active");
+        section.classList.add("active");
       } else {
-        links.classList.remove("active");
+        section.classList.remove("active");
       }
     })
   );
