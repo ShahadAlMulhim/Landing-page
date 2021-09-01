@@ -18,7 +18,7 @@
  * 
 */
 const menu = document.getElementById('navbar__list');
-const menuLink = ["Section 1", "Section 2", "Section 3" , "Section 4"];
+const menuLink = ["About", "Services", "Blog" , "Contact"];
 const AddClassTolinks = ["link1", "link2", "link3 " , "link4"];
 const Anchors = ["first", "second", "third", "four"];
 
@@ -61,7 +61,7 @@ function ActiveLink() {
       ) {
         section.classList.add("active");
       } else {
-        section.classList.remove("active");
+        section.classList.remove("active"); // if the viewport is not as the condition then remove activation from section 
       }
     })
   );

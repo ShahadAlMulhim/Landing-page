@@ -224,5 +224,38 @@ section.your-active-class .landing__container::after {
 
 .active{
     background-color: rgba(136,203,171,1);
-    
+}
+
+@media screen and (min-width:480px) and (max-width:680px){
+
+    .main__hero{
+      margin-top: 10em;
+    }
+    a{
+    font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:270px) and (max-width:480px){
+    .main__hero{
+        margin-top: 10em;
+    }
+    a{
+    font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:270px){
+    .main__hero{
+        margin-top: 10em;
+    }
+    a{
+    font-size: 0.7rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
 }
