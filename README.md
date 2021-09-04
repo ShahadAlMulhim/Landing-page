@@ -1,6 +1,6 @@
 # Landing Page Project
 
-The aim of this project is to convert static web page to an interactive one, by adding the navigation menu using Javascript and learn how to manipulating the DOM.
+The aim of this project is to convert static web page to an interactive one, by adding the navigation menu using Javascript and learn how to manipulate the DOM.
 
  Main Landing Page Behavior:
  - Navigation is built dynamically as an unordered list.

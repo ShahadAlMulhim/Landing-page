@@ -75,7 +75,8 @@ ActiveLink();
 
 // Scroll to section on link click
 links.forEach((link)=> {
-    link.addEventListener('click', function(){
+    link.addEventListener('click', function(e){
+        e.preventDefault();
         var SectionScroll = document.getElementById(link.getAttribute("data-link"));
         SectionScroll.scrollIntoView({
             behavior: "smooth" ,
